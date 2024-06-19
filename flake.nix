@@ -18,7 +18,11 @@
     devShells.${system}.default = pkgs.mkShell rec {
       name = "PythonDevShell";
       buildInputs = with pkgs; [
-        python3
+        (pkgs.python3.withPackages (python-pkgs: [
+          python-pkgs.numpy
+          python-pkgs.pandas
+          python-pkgs.scipy
+        ]))
         bashInteractive
         (vscode-with-extensions.override  {
           vscode = pkgs.vscodium;
@@ -40,7 +44,7 @@
 
       shellHook = ''
         export PS1+="${name}> "
-        echo "Welcome to the C Dev Shell!"
+        echo "Welcome to the Python Dev Shell!"
       '';
     };
   }; 
