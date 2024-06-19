@@ -31,6 +31,7 @@
             mhutchie.git-graph
             ms-python.python
             ms-toolsai.jupyter
+            ms-python.debugpy
           ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
             # {
             #   name = "csharp";
