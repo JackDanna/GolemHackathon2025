@@ -21,11 +21,15 @@
         nix develop -c -- codium .
       '';
     };
+  devShells.${system}.default = (pkgs.buildFHSEnv rec {
+    name = "golem";
+    targetPkgs =
+      pkgs:
+      (with pkgs; [
+        udev
+        alsa-lib
+        openssl
 
-    devShells.${system}.default = pkgs.mkShell rec {
-      name = "PythonDevShell";
-      buildInputs = with pkgs; [
-        (import ./golem.nix { inherit pkgs; })
 
         (pkgs.python3.withPackages (python-pkgs: [
           python-pkgs.numpy
@@ -41,22 +45,31 @@
             ms-python.python
             ms-toolsai.jupyter
             ms-python.debugpy
-          ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-            # {
-            #   name = "csharp";
-            #   publisher = "ms-dotnettools";
-            #   version = "2.30.28";
-            #   sha256 = "sha256-+loUatN8evbHWTTVEmuo9Ups6Z1AfqzCyTWWxAY2DY8=";
-            # }
           ];
         })
-      ];
 
+
+
+      ])
+      ++ (with pkgs.xorg; [
+        
+        libX11
+        libXcursor
+        libXrandr
+      ]);
       shellHook = ''
         export PS1+="${name}> "
-        echo "Welcome to the Python Dev Shell!"
+        echo "Welcome to the Golem Hackaton 2025 Shell!"
       '';
-    };
+
+    multiPkgs =
+      pkgs:
+      (with pkgs; [
+        udev
+        alsa-lib
+      ]);
+    runScript = "bash";
+  }).env;
   }; 
 
 }
