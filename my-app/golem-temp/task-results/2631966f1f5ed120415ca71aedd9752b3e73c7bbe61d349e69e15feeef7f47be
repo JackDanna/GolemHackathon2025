@@ -1,0 +1,7 @@
+{
+  "kind": "RpcLinkMarkerHash",
+  "id": "my:component",
+  "hashInput": "my:component#",
+  "hashHex": "c224a08133d6ad71827623bbfff8595485f5f7914c1ee71691efb4ab80659ba3",
+  "success": true
+}

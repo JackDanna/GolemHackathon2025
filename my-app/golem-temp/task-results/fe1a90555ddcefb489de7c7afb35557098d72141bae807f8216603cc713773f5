@@ -1,0 +1,7 @@
+{
+  "kind": "ResolvedExternalCommandMarkerHash",
+  "id": "{\"build_dir\":\"/home/jackd/Documents/GolemHackathon2025/my-app/components-python/my-component\",\"command\":{\"command\":\"uv run --package my-component componentize-py --import-interface-name \\\"wasi:http/types@0.2.0\\\"=\\\"types\\\" --import-interface-name \\\"wasi:http/outgoing-handler@0.2.0\\\"=\\\"outgoing_handler\\\" --wit-path wit-generated componentize -p src component -o ../../golem-temp/python/components/my_component.wasm\",\"mkdirs\":[\"../../golem-temp/python/components\"],\"sources\":[\"src\",\"../../common-python\"],\"targets\":[\"../../golem-temp/python/components/my_component.wasm\"]}}",
+  "hashInput": "{\"build_dir\":\"/home/jackd/Documents/GolemHackathon2025/my-app/components-python/my-component\",\"command\":{\"command\":\"uv run --package my-component componentize-py --import-interface-name \\\"wasi:http/types@0.2.0\\\"=\\\"types\\\" --import-interface-name \\\"wasi:http/outgoing-handler@0.2.0\\\"=\\\"outgoing_handler\\\" --wit-path wit-generated componentize -p src component -o ../../golem-temp/python/components/my_component.wasm\",\"mkdirs\":[\"../../golem-temp/python/components\"],\"sources\":[\"src\",\"../../common-python\"],\"targets\":[\"../../golem-temp/python/components/my_component.wasm\"]}}",
+  "hashHex": "fe1a90555ddcefb489de7c7afb35557098d72141bae807f8216603cc713773f5",
+  "success": true
+}
