@@ -25,6 +25,8 @@
     devShells.${system}.default = pkgs.mkShell rec {
       name = "PythonDevShell";
       buildInputs = with pkgs; [
+        (import ./golem.nix {})
+
         (pkgs.python3.withPackages (python-pkgs: [
           python-pkgs.numpy
           python-pkgs.pandas
