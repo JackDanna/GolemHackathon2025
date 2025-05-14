@@ -29,13 +29,13 @@ rustPlatform.buildRustPackage rec {
 
   # Required for golem-wasm-rpc's build.rs to find the required protobuf files
   # https://github.com/golemcloud/wasm-rpc/blob/v1.0.6/wasm-rpc/build.rs#L7
-  GOLEM_WASM_AST_ROOT = "../golem-wasm-ast-1.1.0";
+  GOLEM_WASM_AST_ROOT = "../golem-wasm-ast-1.2.3";
   # Required for golem-examples's build.rs to find the required Wasm Interface Type (WIT) files
   # https://github.com/golemcloud/golem-examples/blob/v1.0.6/build.rs#L9
-  GOLEM_WIT_ROOT = "../golem-wit-1.1.0";
+  GOLEM_WIT_ROOT = "../golem-wit-1.2.3";
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-zf/L7aNsfQXCdGpzvBZxgoatAGB92bvIuj59jANrXIc=";
+  cargoHash = "";
 
   # Tests are failing in the sandbox because of some redis integration tests
   doCheck = false;
