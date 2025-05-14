@@ -29,6 +29,7 @@
         udev
         alsa-lib
         openssl
+        uv
 
 
         (pkgs.python3.withPackages (python-pkgs: [
