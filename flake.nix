@@ -29,6 +29,7 @@
         udev
         alsa-lib
         openssl
+        uv
 
 
         (pkgs.python3.withPackages (python-pkgs: [
@@ -45,7 +46,28 @@
             ms-python.python
             ms-toolsai.jupyter
             ms-python.debugpy
-          ];
+          ]
+          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+              # {
+              #   name = "vscode-dotnet-runtime";
+              #   publisher = "ms-dotnettools";
+              #   version = "2.0.5";
+              #   sha256 = "sha256-acP3NULTNNyPw5052ZX1L+ymqn9+t4ydoCns29Ta1MU=";
+              # }
+
+              {
+               name = "vscode-wasm";
+               publisher = "dtsvet";
+               version = "1.4.1";
+               sha256 = "sha256-zs7E3pxf4P8kb3J+5zLoAO2dvTeepuCuBJi5s354k0I=";
+              }
+              # {
+              #   name = "vscode-edit-csv";
+              #   publisher = "janisdd";
+              #   version = "0.8.2";
+              #   sha256 = "sha256-DbAGQnizAzvpITtPwG4BHflUwBUrmOWCO7hRDOr/YWQ=";
+              # }
+            ];
         })
 
 

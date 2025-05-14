@@ -1,0 +1,7 @@
+{
+  "kind": "AddMetadataMarkerHash",
+  "id": "my:component",
+  "hashInput": "my:component",
+  "hashHex": "5fda37d3878bcbda719af34ff6fe6133c7df2eb1808aff7ac75ce431103e75bf",
+  "success": true
+}

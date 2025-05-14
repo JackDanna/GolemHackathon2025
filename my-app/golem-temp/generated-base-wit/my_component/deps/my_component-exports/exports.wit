@@ -1,0 +1,8 @@
+package my:component-exports;
+
+interface my-component-api {
+  add: func(value: u64);
+  get: func() -> u64;
+}
+
+interface my-component-inline-functions {}
